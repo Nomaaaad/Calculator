@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+  /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
+}
+
+/* Display */
+.calculator {
+  background: white;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+.calculator-display {
+  background: rgb(165, 157, 157);
+  border-radius: 12px 12px 0 0;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 3rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Buttons */
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: rgb(219, 217, 217);
+  color: black;
+  font-size: 2.2rem;
+}
+
+.clear {
+  background: rgb(189, 182, 182);
+  color: white;
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+}
+
+/* Media Query: Large Smartphone (Verical) */
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
+}
